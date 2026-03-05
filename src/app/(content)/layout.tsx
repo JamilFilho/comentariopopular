@@ -20,7 +20,6 @@ import {
   SidebarHeaderTitle,
   NestedLink,
 } from '@/components/sidebar';
-import { useRouter } from 'next/navigation';
 
 import Header from '@/components/header';
 import { ModeToggle } from '@/components/mode-toggle';
@@ -57,7 +56,6 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   // Destructure sidebarNav from configDocs
-  const router = useRouter();
   const isMobile = useIsMobile();
   return (
     <SidebarLayout>
