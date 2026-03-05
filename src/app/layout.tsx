@@ -2,6 +2,7 @@ import { Geist } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Metadata } from 'next';
+import { Analytics } from "@vercel/analytics/next";
 import { meta } from '../../config/meta';
 
 const geistSans = Geist({
@@ -24,6 +25,7 @@ export default function RootLayout({
           text-sm
           font-regular tracking-wide antialiased`}
       >
+        <Analytics/>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
